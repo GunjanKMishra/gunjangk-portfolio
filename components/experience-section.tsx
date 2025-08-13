@@ -63,134 +63,121 @@ export function ExperienceSection() {
   const [selectedExperience, setSelectedExperience] = useState<(typeof experiences)[0] | null>(null)
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="mb-10 sm:mb-16"
         >
-          <h2 className="text-4xl font-bold text-blue-400 mb-4">Experience</h2>
-          <p className="text-gray-400 text-lg">
+          <h2 className="text-2xl sm:text-4xl font-bold text-blue-400 mb-3 sm:mb-4">Experience</h2>
+          <p className="text-gray-400 text-base sm:text-lg">
             Here's a timeline of my professional journey, showcasing my roles and contributions in blockchain and
             full-stack development.
           </p>
         </motion.div>
 
-        {/* <TracingBeam className="px-6"> */}
-        <div className="space-y-8">
+        {/* List */}
+        <div className="space-y-4 sm:space-y-8">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
               className="relative"
             >
-              {/* Experience Card - Full Width */}
+              {/* Card */}
               <div
-                className="w-full p-8 rounded-xl border border-gray-800 bg-gray-900/80 hover:bg-gray-900/100 transition-all duration-300 cursor-pointer hover:border-blue-500/50 group"
+                className="w-full p-4 sm:p-8 rounded-xl border border-gray-800 bg-gray-900/80 md:hover:bg-gray-900/100 transition-all duration-300 cursor-pointer md:hover:border-blue-500/50 group"
                 onClick={() => setSelectedExperience(exp)}
               >
-                <div className="flex items-start gap-6">
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                   {/* Icon */}
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center transition-colors">
-                      <Briefcase className="w-6 h-6 text-blue-400" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500/20 rounded-lg flex items-center justify-center transition-colors">
+                      <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-3">
+                  <div className="flex-1 w-full">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3 mb-3">
                       <div>
-                        <h3 className="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-lg sm:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">
                           {exp.title}
                         </h3>
-                        <p className="text-gray-400 text-lg">{exp.company}</p>
+                        <p className="text-gray-400 text-sm sm:text-lg">{exp.company}</p>
                       </div>
-                      <span className="text-sm text-gray-500 bg-gray-800 px-3 py-1 rounded-full">{exp.period}</span>
+                      <span className="self-start sm:self-auto text-[11px] sm:text-sm text-gray-500 bg-gray-800 px-2 py-1 sm:px-3 rounded-full whitespace-nowrap">
+                        {exp.period}
+                      </span>
                     </div>
 
-                    <p className="text-gray-300 mb-6 text-lg leading-relaxed">{exp.description}</p>
+                    <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
+                      {exp.description}
+                    </p>
 
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-2 sm:mb-4">
                       {exp.techStack.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-gray-800 text-gray-300 hover:bg-gray-700">
+                        <Badge key={tech} variant="secondary" className="bg-gray-800 text-gray-300 hover:bg-gray-700 text-xs sm:text-sm">
                           {tech}
                         </Badge>
                       ))}
                     </div>
-
-                    {/* Links */}
-                    {/* <div className="flex gap-2">
-                      {exp.links.map((link) => (
-                        <Button
-                          key={link.label}
-                          variant="ghost"
-                          size="sm"
-                          className="text-gray-400 hover:text-blue-400"
-                        >
-                          {link.label}
-                          <ExternalLink className="w-4 h-4 ml-1" />
-                        </Button>
-                      ))}
-                    </div> */}
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-        {/* </TracingBeam> */}
 
-        {/* Experience Detail Modal */}
-        <Dialog open={!!selectedExperience} onOpenChange={() => setSelectedExperience(null)}>
-          <DialogContent className="bg-gray-900 border-gray-800 text-white max-w-2xl">
-            <DialogHeader>
-              <DialogTitle className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold">{selectedExperience?.title}</h3>
-                  <p className="text-gray-400">{selectedExperience?.company}</p>
+        <Dialog open={!!selectedExperience} onOpenChange={(open) => !open && setSelectedExperience(null)}>
+          <DialogContent
+            className="bg-gray-900 border border-gray-800 text-white p-0 overflow-hidden rounded-2xl box-border
+            w-[min(92vw,700px)] sm:w-full sm:max-w-2xl max-h-[90vh]"
+          >
+            <DialogHeader className="px-4 sm:px-6 pt-4 sm:pt-6">
+              <DialogTitle className="flex items-start justify-between gap-3 mt-5 md:mt-2">
+                <div className="min-w-0 pr-2 text-left">
+                  <h3 className="text-lg sm:text-xl font-semibold break-words">{selectedExperience?.title}</h3>
+                  <p className="text-gray-400 text-sm sm:text-base break-words">{selectedExperience?.company}</p>
                 </div>
-                {/* <Button variant="ghost" size="icon" onClick={() => setSelectedExperience(null)}>
-                  <X className="h-4 w-4" />
-                </Button> */}
               </DialogTitle>
             </DialogHeader>
 
             {selectedExperience && (
-              <div className="space-y-6">
+              <div className="px-4 sm:px-6 pb-4 sm:pb-6 overflow-y-auto space-y-5 sm:space-y-6">
                 <div>
-                  <h4 className="font-semibold mb-2">Tech Stack</h4>
+                  <h4 className="font-semibold mb-2 text-sm sm:text-base">Tech Stack</h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedExperience.techStack.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="bg-gray-800 text-gray-300">
-                        {tech}
-                      </Badge>
+                      <Badge key={tech} variant="secondary" className="bg-gray-800 text-gray-300 text-xs sm:text-sm">{tech}</Badge>
                     ))}
                   </div>
                 </div>
 
                 {selectedExperience.achievements.length > 0 && (
                   <div>
-                    <h4 className="font-semibold mb-2">Key Achievements</h4>
+                    <h4 className="font-semibold mb-2 text-sm sm:text-base">Key Achievements</h4>
                     <ul className="space-y-2">
                       {selectedExperience.achievements.map((achievement, index) => (
-                        <li key={index} className="text-gray-300 flex items-start gap-2">
+                        <li key={index} className="text-gray-300 flex items-start gap-2 text-sm sm:text-base">
                           <span className="text-blue-400 mt-1">•</span>
-                          {achievement}
+                          <span className="leading-relaxed break-words">{achievement}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
 
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   {selectedExperience.links.map((link) => (
                     <Link key={link.label} href={link.url} target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm">
+                      <Button variant="outline" size="sm" className="w-full sm:w-auto">
                         {link.label}
                         <ExternalLink className="w-4 h-4 ml-1" />
                       </Button>
