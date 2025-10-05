@@ -6,6 +6,14 @@ import { link } from "fs"
 
 const projects = [
   {
+    title: "DMRC Gati - Delhi Metro Fastest Route API",
+    description:
+      "First public fastest-route API for Delhi Metro covering 285+ stations across 12 lines, added timing components like run time and interchange penalty. shipped with live demo + docs.",
+    techStack: ["Next.js", "Express.js", "ShadCn UI"],
+    type: "Client",
+    link: "https://dmrc-landing.gunjanmishra.com/"
+  },
+  {
     title: "Main Platform for CMF, IIT Delhi",
     description:
       "Full-stack centralized software platform to digitize and automate IIT Delhi's manufacturing ecosystem with scalable architecture",
