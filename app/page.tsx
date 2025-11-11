@@ -7,8 +7,9 @@ import { BlogsSection } from "@/components/blogs-section"
 import { GridBackground } from "@/components/ui/grid-background"
 import { BackgroundBeams } from "@/components/ui/background-beams"
 import { EducationSection } from "@/components/education-section"
-import { ContactSection } from "@/components/contact-section"
+// import { ContactSection } from "@/components/contact-section"
 import { TracingBeam } from "@/components/ui/tracing-beam"
+import { SkillsSection } from "@/components/skills-section"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <div>
         <HeroSection />
         <TracingBeam className="px-6">
+          <SkillsSection />
           <ExperienceSection />
           <EducationSection />
           <ProjectsSection />
