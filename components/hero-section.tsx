@@ -16,7 +16,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="fixed top-8 right-8 flex gap-4 z-20"
         >
-          <a href="https://drive.google.com/file/d/1mMVVUovvq4X5bRjbcwvesMe2ov4O_37e/view" target="_blank">
+          <a href="https://drive.google.com/file/d/1a2Zyeu5s95Wh7LcFKMyqdRvDcgbQHXPD/view?usp=sharing" target="_blank">
             <Button
               variant="outline"
               className="text-gray-300 border-gray-700 hover:bg-white/10 hover:text-blue-500 border-blue-500/50 transition-all duration-300"
