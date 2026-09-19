@@ -16,7 +16,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="fixed top-8 right-8 flex gap-4 z-20"
         >
-          <a href="https://drive.google.com/file/d/1a2Zyeu5s95Wh7LcFKMyqdRvDcgbQHXPD/view?usp=sharing" target="_blank">
+          <a href="/GunjanMishra_Cv.pdf" target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
               className="text-gray-300 border-gray-700 hover:bg-white/10 hover:text-blue-500 border-blue-500/50 transition-all duration-300"
@@ -26,7 +26,7 @@ export function HeroSection() {
             </Button>
           </a>
 
-          <a href="https://twitter.com/_gunjanmishra" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/ixgunjan" target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-white/10">
               <Twitter className="h-5 w-5" />
             </Button>
@@ -38,12 +38,12 @@ export function HeroSection() {
             </Button>
           </a>
 
-          <a href="https://linkedin.com/in/gunjankmishra" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/ixgunjan" target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-white/10">
               <Linkedin className="h-5 w-5" />
             </Button>
           </a>
-          <a href="mailto:igunjan096@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:hi@gunjanmishra.com" target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-white/10">
               <MailIcon className="h-5 w-5" />
             </Button>
@@ -84,7 +84,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl text-gray-400 mb-8"
         >
-          Computer Science Student | Full Stack Developer
+          Founder @ CoursifyYT | Full Stack & DevOps Engineer
         </motion.p>
 
         <motion.div
@@ -94,10 +94,11 @@ export function HeroSection() {
           className="max-w-3xl mx-auto mb-12"
         >
           <p className="text-lg text-gray-300 leading-relaxed">
-            I'm a Full Stack Developer and Computer Science student at MAIT, New Delhi. I specialize in building
-            scalable web applications, AI-powered solutions, and have experience working on government projects. From
-            winning Smart India Hackathon to developing platforms for IIT Delhi, I turn complex problems into elegant
-            digital solutions.
+            I'm a Full Stack & DevOps Engineer and Computer Science student at MAIT, New Delhi, and the founder of
+            CoursifyYT, a browser extension that turns YouTube into a structured learning platform. I build scalable web
+            applications, CI/CD pipelines and AI-powered solutions. From winning Smart India Hackathon to building the
+            core platform for IIT Delhi's CMF and automating multi-platform releases at Convisaas, I turn complex
+            problems into elegant digital solutions.
           </p>
         </motion.div>
 

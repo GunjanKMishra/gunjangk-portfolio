@@ -47,7 +47,7 @@ export function EducationSection() {
                   <p className="text-gray-400 text-base sm:text-lg">
                     Maharaja Agrasen Institute of Technology (MAIT)
                   </p>
-                  <p className="text-gray-500 text-sm sm:text-base">New Delhi, India</p>
+                  <p className="text-gray-500 text-sm sm:text-base">New Delhi, India | SGPA: 8.5/10</p>
                 </div>
                 <div className="inline-flex items-center gap-2 self-start md:self-auto text-gray-500 bg-gray-800 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full">
                   <Calendar className="w-4 h-4" />
@@ -56,9 +56,9 @@ export function EducationSection() {
               </div>
 
               <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-                Currently pursuing Bachelor's degree in Computer Science with focus on Full Stack Development, Machine
-                Learning, and Software Engineering. Previous Member of IEEE MAIT Chapter and winner of multiple hackathons
-                including Smart India Hackathon.
+                Bachelor's degree in Computer Science with focus on Full Stack Development, DevOps, Machine Learning, and
+                Software Engineering. Former Joint Secretary of the IEEE MAIT Chapter and winner of Smart India Hackathon
+                2023.
               </p>
             </div>
           </div>

@@ -8,15 +8,15 @@ const projects = [
   {
     title: "DMRC Gati - Delhi Metro Fastest Route API",
     description:
-      "First public fastest-route API for Delhi Metro covering 285+ stations across 12 lines, added timing components like run time and interchange penalty. shipped with live demo + docs.",
-    techStack: ["Next.js", "Express.js", "ShadCn UI"],
+      "High-performance fastest-route API for the Delhi Metro network covering 285+ stations across 12 lines, with travel-time computation and interchange penalty logic. Zero-cost access with no API keys or server configuration, enabling quick integration for web and mobile apps.",
+    techStack: ["Next.js", "Node.js", "Express.js", "Tailwind CSS"],
     type: "Client",
     link: "https://dmrc-landing.gunjanmishra.com/"
   },
   {
     title: "Main Platform for CMF, IIT Delhi",
     description:
-      "Full-stack centralized software platform to digitize and automate IIT Delhi's manufacturing ecosystem with scalable architecture",
+      "Full-stack digital platform to automate and centralize operations of IIT Delhi's Central Manufacturing Facility, with scalable modules for machine booking, workshop scheduling, lab access management, and role-based authorization across departments.",
     techStack: ["TypeScript", "Prisma ORM", "Next.js", "Express.js", "ShadCn UI"],
     type: "Client",
     link: "https://cmf.iitd.ac.in"
@@ -24,8 +24,8 @@ const projects = [
   {
     title: "Lingua Master (Website + Web Extension + Telegram Bot)",
     description:
-      "ML-powered Language Translator tools handling real-time English <-> Hindi translations for government and commercial websites without maintaining a single JSON file. utilized a dataset of 1.6 million rows.",
-    techStack: ["React", "Node.js", "Python", "Flask", "TensorFlow", "Hugging Face", "REST API"],
+      "ML-powered language translation tools performing real-time English <-> Hindi translation for government and enterprise websites using a dataset of 1.6M+ records. Replaced static JSON-based methods with dynamic ML inference pipelines, cutting long-term maintenance overhead by 90%.",
+    techStack: ["React", "Node.js", "Express.js", "Python", "Flask", "TensorFlow", "Transformers", "Hugging Face", "REST APIs"],
     type: "Client",
     link: "https://drive.google.com/file/d/1FyjD1hBbF4L0Q2VSJ__yhtxfEnOh6AiE/view"
   },

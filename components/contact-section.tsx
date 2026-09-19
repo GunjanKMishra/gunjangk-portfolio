@@ -31,7 +31,7 @@ export function ContactSection() {
               <Mail className="w-6 h-6 text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-            <p className="text-gray-400 text-sm mb-4">igunjan096@gmail.com</p>
+            <p className="text-gray-400 text-sm mb-4">hi@gunjanmishra.com</p>
             <Button variant="outline" size="sm" className="w-full bg-transparent">
               Send Email
             </Button>
@@ -64,7 +64,7 @@ export function ContactSection() {
               <Linkedin className="w-6 h-6 text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">LinkedIn</h3>
-            <p className="text-gray-400 text-sm mb-4">gunjankmishra</p>
+            <p className="text-gray-400 text-sm mb-4">ixgunjan</p>
             <Button variant="outline" size="sm" className="w-full bg-transparent">
               Connect
             </Button>

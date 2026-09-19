@@ -23,7 +23,7 @@ const skills = [
     {
         category: "DevOps & Cloud",
         icon: <GitBranch className="w-5 h-5" />,
-        list: ["Docker", "Git", "GitHub", "CI/CD (GitHub Actions)", "AWS EC2", "Vercel", "Netlify", "Render", "Postman"] // [cite: 9]
+        list: ["Docker", "Git", "GitHub", "Bitbucket", "CI/CD Pipelines", "AWS EC2", "Vercel", "Postman", "Cloudflare R2", "Cloudflare Workers"]
     },
     {
         category: "Programming Languages",

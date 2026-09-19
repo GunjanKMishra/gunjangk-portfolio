@@ -8,52 +8,90 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { motion } from "framer-motion"
 import Link from "next/link"
 
-const experiences = [
+const experiences: {
+  id: number
+  title: string
+  company: string
+  period: string
+  description: string
+  techStack: string[]
+  achievements: string[]
+  links: { label: string; url: string }[]
+}[] = [
   {
     id: 1,
+    title: "Founder & Engineer",
+    company: "CoursifyYT",
+    period: "Jan 26 – Present",
+    description:
+      "Built and launched CoursifyYT, a browser extension that transforms YouTube videos into structured, distraction-free learning experiences.",
+    techStack: ["Next.js", "Node.js", "MongoDB", "TypeScript"],
+    achievements: [
+      "Built and launched CoursifyYT with study tools including Overview, Key Terms, Quizzes, Notes, Flashcards and in-video Q&A",
+      "Engineered the full-stack platform using Next.js, Node.js, MongoDB, and TypeScript, implementing authentication, content management, and scalable APIs",
+      "Designed and shipped the product end-to-end, from architecture and development to deployment, payments, and Diff Browser's Web Store launch",
+    ],
+    links: [{ label: "CoursifyYT", url: "https://coursifyyt.com" }],
+  },
+  {
+    id: 2,
+    title: "Facet Engineer (DevOps) Intern",
+    company: "Convisaas (Qyupe) · Texas, United States",
+    period: "Oct 25 – Mar 26",
+    description:
+      "Automated CI/CD pipelines and multi-platform releases for eazyPetition and trackMyPetition across Web, Windows, macOS, Android, and iOS.",
+    techStack: ["Bitbucket Pipelines", "CI/CD", "Electron", "Capacitor", "Cloudflare R2", "Google Play Console"],
+    achievements: [
+      "Built and automated CI/CD pipelines and local builds for Electron desktop apps and Capacitor-based Android apps for eazyPetition and trackMyPetition",
+      "Enabled automated releases to Cloudflare R2 and Google Play Console",
+      "Developed and optimized Bitbucket Pipelines to automate onboarding/offboarding webhooks and multi-platform deployments across Web, Windows, macOS, Android, and iOS",
+    ],
+    links: [],
+  },
+  {
+    id: 3,
     title: "Software Development Engineer (SDE) Intern",
     company: "IITD AIA Foundation for Smart Manufacturing",
-    period: "Jan 25 – April 25",
+    period: "Jan 25 – Aug 25",
     description:
-      "Built the core software platform for the Central Manufacturing Facility (CMF) of IIT Delhi under the direct supervision of the CMF Director Dr Sunil Jha.",
+      "Built the core software platform for the Central Manufacturing Facility (CMF) of IIT Delhi under the direct supervision of the Director of CMF.",
     techStack: ["TypeScript", "Prisma ORM", "Next.js", "Express.js", "ShadCn UI"],
     achievements: [
       "Built the core software platform for the Central Manufacturing Facility (CMF) of IIT Delhi",
-      "Developed a full-stack solution to automate scheduling, machine usage, and workshop/lab management across multiple departments",
-      "Enabled seamless booking of high-end manufacturing resources, interdisciplinary collaboration, and industry-academic engagement",
-      "Delivered scalable, well-documented code, and participated in collaborative code reviews and deployment cycles",
+      "Streamlined cross-departmental workshop and lab management, enabling interdisciplinary collaboration and 60% faster project turnaround",
+      "Architected modules for machine booking, workshop scheduling, lab access management, and role-based authorization across departments",
     ],
     links: [{ label: "IIT Delhi", url: "https://cmf.iitd.ac.in/" }],
   },
   {
-    id: 2,
-    title: "Smart India Hackathon Winner",
-    company: "Government of India",
+    id: 4,
+    title: "Smart India Hackathon 2023 — Winner",
+    company: "Web Developer · Government of India",
     period: "Oct 23 – Dec 23",
-    description: "Won Smart India Hackathon by developing a language translator tool for government organizations.",
+    description:
+      "Achieved national victory in SIH 2023, India's largest innovation hackathon, with 51,000+ idea submissions and 2,67,000+ students across 2,360 institutions.",
     techStack: ["React", "Node.js", "Python", "ML", "TensorFlow", "Hugging Face"],
     achievements: [
-      "Language translator tool to convert English to Hindi without using JSON files",
-      "Dataset available on Hugging Face with ML and deep learning methodologies",
-      "Created website and web extension for translation implementation",
-      "Single web developer in team with 48 hours of continuous programming in finale",
+      "Won against 51,000+ idea submissions from 2,67,000+ students across 2,360 institutions",
+      "Delivered a high-impact solution addressing one of the 234 problem statements from 30 ministries/PSUs, evaluated by MoE's Innovation Cell and AICTE",
+      "Built an ML-powered English–Hindi translation tool (website + web extension) for government organizations",
     ],
     links: [
       { label: "SIH", url: "https://www.sih.gov.in/" },
     ],
   },
   {
-    id: 3,
-    title: "Joint Sec & WebD Team Lead",
+    id: 5,
+    title: "Joint Secretary & Web Developer Team Lead",
     company: "IEEE MAIT Chapter",
-    period: "Aug 23 – July 25",
-    description: "Led the top-most team at IEEE MAIT Chapter, managed technical initiatives and event coordinations.",
+    period: "Aug 23 – Jul 25",
+    description:
+      "Joint Secretary on the EXECOM team and Web Developer Team Lead on the CORE team, managing technical initiatives and events.",
     techStack: ["Web Development", "Team Leadership", "Event Management"],
     achievements: [
-      "Developed and implemented a comprehensive website enhancement strategy for IEEE MAIT",
-      "Created and curated engaging newsletters using Luma and Google Forms for 10+ events",
-      "Resulted in a 25% increase in event registrations and a 40% boost in attendee engagement",
-      "Lead team for in-campus promotions and make awareness among 300+ new students",
+      "Led promotional campaigns reaching 400+ students",
+      "Mentored junior developers and coordinated release cycles",
+      "Built and maintained team-facing web tools and event pages, improving delivery speed and reliability",
     ],
     links: [{ label: "IEEE MAIT", url: "https://www.mait.ac.in/index.php/component/content/article/ieee-mait-student-branch.html?catid=10&Itemid=384" }],
   }
@@ -74,8 +112,8 @@ export function ExperienceSection() {
         >
           <h2 className="text-2xl sm:text-4xl font-bold text-blue-400 mb-3 sm:mb-4">Experience</h2>
           <p className="text-gray-400 text-base sm:text-lg">
-            Here's a timeline of my professional journey, showcasing my roles and contributions in blockchain and
-            full-stack development.
+            Here's a timeline of my professional journey, showcasing my roles and contributions in full-stack
+            development, DevOps, and leadership.
           </p>
         </motion.div>
 
